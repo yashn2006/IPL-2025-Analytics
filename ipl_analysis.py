@@ -1,13 +1,12 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-#import seaborn as sns
+import os
 
-# ----------------------------
-# 1️⃣ Load Data
-# ----------------------------
-batsmen = pd.read_csv("IPL2025Batters.csv")
-bowlers = pd.read_csv("IPL2025Bowlers.csv")
+base_path = os.path.dirname(__file__)
+
+batsmen = pd.read_csv(os.path.join(base_path, "data", "IPL2025Batters.csv"))
+bowlers = pd.read_csv(os.path.join(base_path, "data", "IPL2025Bowlers.csv"))
 
 # ----------------------------
 # 2️⃣ Fill Null Values in Batsmen
